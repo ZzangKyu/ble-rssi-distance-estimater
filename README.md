@@ -58,3 +58,24 @@ def apply_moving_average(rssi):
     if len(rssi_window) > window_size:
         rssi_window.pop(0)
     return sum(rssi_window) / len(rssi_window)
+
+## Project Demo
+
+This project was tested on Raspberry Pi using BlueZ Bluetooth stack to collect RSSI values from BLE devices.
+
+Example log output:
+
+```
+[12:01:22] Device: AA:BB:CC:DD:EE:FF, RSSI: -65.40 dBm
+[12:01:23] Device: AA:BB:CC:DD:EE:FF, RSSI: -64.80 dBm
+[12:01:24] Device: AA:BB:CC:DD:EE:FF, RSSI: -65.10 dBm
+```
+
+## Repository Structure
+
+```
+ble-rssi-distance-estimator/
+├── rssi_scanner.py
+├── README.md
+└── .gitignore
+```
